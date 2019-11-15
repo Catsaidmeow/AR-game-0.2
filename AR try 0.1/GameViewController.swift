@@ -13,7 +13,7 @@ import ARKit
 
 class GameViewController: UIViewController, ARSCNViewDelegate {
     
-//  MARK: - Init
+//  MARK: - WIP
     
     //decleration of label
     @IBOutlet weak var Try01: UILabel!
@@ -24,7 +24,9 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
     let configuration = ARWorldTrackingConfiguration()
     
-//    MARK: - Utility
+    
+    
+//    MARK: - Init
     
     // on start
     override func viewDidLoad() {
@@ -143,6 +145,8 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
+//    MARK: - Stuffs
+    
     // Present an error message to the user
         func session(_ session: ARSession, didFailWithError error: Error) {}
     
@@ -152,4 +156,10 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     // Reset tracking and/or remove existing anchors if consistent tracking is required
     func sessionInterruptionEnded(_ session: ARSession) {}
 
+    func returnNumber() -> Int {
+
+        return ARReferenceObject.referenceObjects(inGroupNamed: "ToFind", bundle: Bundle.main)!.count
+        
+    }
+    
 }
