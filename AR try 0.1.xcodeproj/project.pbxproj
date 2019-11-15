@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E0073E4A237C2FB5000DF58A /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0073E49237C2FB5000DF58A /* SceneManager.swift */; };
 		E0073E4C237C3001000DF58A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0073E4B237C3001000DF58A /* GameViewController.swift */; };
+		E0513CC7237EA9F1003C055C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E0513CC6237EA9F1003C055C /* .gitignore */; };
 		E0C93667237AB61A005F201C /* Scene01.scn in Resources */ = {isa = PBXBuildFile; fileRef = E0C93666237AB61A005F201C /* Scene01.scn */; };
 		E0C93669237ACBD6005F201C /* Backpack.sks in Resources */ = {isa = PBXBuildFile; fileRef = E0C93668237ACBD6005F201C /* Backpack.sks */; };
 		E0DBF4FF23797F57005B4E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBF4FE23797F57005B4E0F /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		E0073E49237C2FB5000DF58A /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		E0073E4B237C3001000DF58A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E0513CC6237EA9F1003C055C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E0C93666237AB61A005F201C /* Scene01.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Scene01.scn; sourceTree = "<group>"; };
 		E0C93668237ACBD6005F201C /* Backpack.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Backpack.sks; sourceTree = "<group>"; };
 		E0DBF4FB23797F57005B4E0F /* AR try 0.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR try 0.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 		E0DBF4F223797F57005B4E0F = {
 			isa = PBXGroup;
 			children = (
+				E0513CC6237EA9F1003C055C /* .gitignore */,
 				E0DBF4FD23797F57005B4E0F /* AR try 0.1 */,
 				E0DBF51823797F58005B4E0F /* AR try 0.1Tests */,
 				E0DBF52323797F58005B4E0F /* AR try 0.1UITests */,
@@ -242,6 +245,7 @@
 				E0C93667237AB61A005F201C /* Scene01.scn in Resources */,
 				E0DBF50C23797F58005B4E0F /* Assets.xcassets in Resources */,
 				E0C93669237ACBD6005F201C /* Backpack.sks in Resources */,
+				E0513CC7237EA9F1003C055C /* .gitignore in Resources */,
 				E0DBF50F23797F58005B4E0F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
