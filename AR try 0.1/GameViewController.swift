@@ -13,7 +13,8 @@ import ARKit
 
 class GameViewController: UIViewController, ARSCNViewDelegate {
     
-//  MARK: - Init
+    //mamage the SKS file
+//    let sceneManager = SceneManager()
     
     //decleration of label
     @IBOutlet weak var Try01: UILabel!
@@ -23,8 +24,6 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     
     let configuration = ARWorldTrackingConfiguration()
-    
-//    MARK: - Utility
     
     // on start
     override func viewDidLoad() {
@@ -63,8 +62,6 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
 
-//    MARK: - When object is found
-    
 //    when the object is found
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         
@@ -114,8 +111,6 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
-//    MARK: - Gesture Managmemt
-    
 //    new gesture
     private func gestureRecognizer(){
         
@@ -146,7 +141,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     // Present an error message to the user
         func session(_ session: ARSession, didFailWithError error: Error) {}
     
-    // Inform the user that the session hs been interrupted, for example, by presenting an overlay
+    // Inform the user that the session has been interrupted, for example, by presenting an overlay
     func sessionWasInterrupted(_ session: ARSession) {}
     
     // Reset tracking and/or remove existing anchors if consistent tracking is required
