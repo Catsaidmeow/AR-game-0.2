@@ -93,8 +93,36 @@
 			children = (
 				E0073E4B237C3001000DF58A /* GameViewController.swift */,
 				E0513CCC237EBE80003C055C /* CollectionManager.swift */,
+				E05CBD5B23808EDF00D54E2F /* PopUpViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E05CBD5F2380C14B00D54E2F /* Extensione */ = {
+			isa = PBXGroup;
+			children = (
+				E0513CCE237ECAF5003C055C /* extension.swift */,
+			);
+			name = Extensione;
+			sourceTree = "<group>";
+		};
+		E05CBD602380C16A00D54E2F /* Data Managment */ = {
+			isa = PBXGroup;
+			children = (
+				E0DBF50B23797F58005B4E0F /* Assets.xcassets */,
+				E0073E49237C2FB5000DF58A /* SceneManager.swift */,
+				E0DBF50823797F57005B4E0F /* Main.storyboard */,
+			);
+			name = "Data Managment";
+			sourceTree = "<group>";
+		};
+		E05CBD612380C19800D54E2F /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				E0C93666237AB61A005F201C /* Scene01.scn */,
+				E0C93668237ACBD6005F201C /* Backpack.sks */,
+			);
+			name = utility;
 			sourceTree = "<group>";
 		};
 		E0DBF4F223797F57005B4E0F = {
@@ -122,16 +150,12 @@
 			isa = PBXGroup;
 			children = (
 				E05CBD5E2380901B00D54E2F /* Controllers */,
+				E05CBD5F2380C14B00D54E2F /* Extensione */,
+				E05CBD612380C19800D54E2F /* utility */,
+				E05CBD602380C16A00D54E2F /* Data Managment */,
 				E0DBF4FE23797F57005B4E0F /* AppDelegate.swift */,
-				E05CBD5B23808EDF00D54E2F /* PopUpViewController.swift */,
-				E0073E49237C2FB5000DF58A /* SceneManager.swift */,
-				E0513CCE237ECAF5003C055C /* extension.swift */,
-				E0DBF50823797F57005B4E0F /* Main.storyboard */,
-				E0DBF50B23797F58005B4E0F /* Assets.xcassets */,
 				E0DBF50D23797F58005B4E0F /* LaunchScreen.storyboard */,
 				E0DBF51023797F58005B4E0F /* Info.plist */,
-				E0C93666237AB61A005F201C /* Scene01.scn */,
-				E0C93668237ACBD6005F201C /* Backpack.sks */,
 			);
 			path = "AR try 0.1";
 			sourceTree = "<group>";
