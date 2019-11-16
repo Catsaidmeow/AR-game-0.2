@@ -19,7 +19,7 @@ class WindowManager{
         case "Scatola" :
             return ("images-2.jpeg","Divulgazione")
         default:
-            return ( "peppe" , "pluto" )
+            return ( "placeholder.jpeg" , "Work in progress\nplease wait" )
         }        
     }
     

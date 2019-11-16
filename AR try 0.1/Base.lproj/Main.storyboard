@@ -40,22 +40,24 @@
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="E5n-Ha-jff" kind="show" id="G1K-cw-7zn"/>
+                                    <action selector="toCollection:" destination="BV1-FR-VrT" eventType="touchUpInside" id="gfI-KA-8ww"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="T5E-J5-NYw"/>
                     <connections>
                         <outlet property="Try01" destination="6be-kU-99w" id="oR0-NY-Byr"/>
                         <outlet property="Try2" destination="5am-KU-1pO" id="TDO-g0-mOW"/>
                         <outlet property="sceneView" destination="EEB-ju-Xxc" id="cEc-XD-ylu"/>
+                        <segue destination="E5n-Ha-jff" kind="show" identifier="toMemeCollection" id="HqI-A2-xZC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-414.49275362318843" y="328.79464285714283"/>
+            <point key="canvasLocation" x="-519" y="329"/>
         </scene>
         <!--Collection Manager-->
         <scene sceneID="svB-pE-Jie">
@@ -71,13 +73,6 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="30" minY="70" maxX="30" maxY="20"/>
                         </collectionViewFlowLayout>
-                        <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p66-Xm-Gpk">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="02o-Nq-Zt6">
                                 <rect key="frame" x="30" y="70" width="167" height="167"/>
@@ -98,6 +93,13 @@
                                             <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPI-qT-z3a">
+                                            <rect key="frame" x="-5" y="-5" width="177" height="177"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="toInformation:" destination="E5n-Ha-jff" eventType="touchUpInside" id="2FR-Me-lSj"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,12 +113,53 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="waf-ya-IQS"/>
                     <connections>
-                        <outlet property="memes" destination="p66-Xm-Gpk" id="Wwr-W5-dsC"/>
+                        <segue destination="2C8-fz-21H" kind="presentation" identifier="toInformation" modalPresentationStyle="overFullScreen" id="Uig-8M-pZy"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yt8-UG-uqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478.26086956521743" y="328.79464285714283"/>
+            <point key="canvasLocation" x="400" y="329"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="Gxz-ly-wrp">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6O-5w-NOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="PopUpStoryboard" id="2C8-fz-21H" customClass="PopUpViewController" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MH2-el-yKR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHl-jf-JeX">
+                                <rect key="frame" x="64" y="200" width="286" height="497"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAW-Pl-3F0">
+                                        <rect key="frame" x="8" y="8" width="270" height="334"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRx-r4-Ggj">
+                                        <rect key="frame" x="23" y="350" width="240" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="QQa-2X-EtK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gJD-Kd-WrE"/>
+                    <connections>
+                        <outlet property="informationView" destination="gHl-jf-JeX" id="vQ4-KN-QWA"/>
+                        <outlet property="memeDescription" destination="sRx-r4-Ggj" id="ck8-1v-VGm"/>
+                        <outlet property="memeImage" destination="rAW-Pl-3F0" id="bKt-pJ-DmB"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1382.608695652174" y="328.79464285714283"/>
         </scene>
     </scenes>
     <resources>

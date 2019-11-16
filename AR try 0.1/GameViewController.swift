@@ -15,6 +15,8 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
 //  MARK: - WIP
     
+//    var collection : CollectionManager = CollectionManager()
+
     var memeUnlocked = 0
     
     //decleration of label
@@ -25,7 +27,9 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     
     let configuration = ARWorldTrackingConfiguration()
-    var memeIdentifier : (imageName : String, textMeme : String) = ("a","a")
+    var memeIdentifier : [(imageName : String, textMeme : String)] = []
+    
+    
     
 //    MARK: - Init
     
@@ -79,7 +83,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
 
         }
         
-        Try01.text = "Found"
+        Try01.text = "Found \(memeUnlocked+1)"
         
         return node
 
@@ -88,19 +92,23 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
 //    add pop-up
     func nodeAdded(_ node: SCNNode, for objectAnchor: ARObjectAnchor){
         
-        //declaration part
-        
-        memeIdentifier = WindowManager().ObjectToMeme(objectName: objectAnchor.referenceObject.name!)
+//        //declaration part
+//        memeIdentifier[memeUnlocked] = WindowManager().ObjectToMeme(objectName: objectAnchor.referenceObject.name!)
         let spriteKitScene = SKScene(fileNamed: "Backpack.sks")
         let memeImage = spriteKitScene?.childNode(withName: "Meme") as? SKSpriteNode
         let memeText = spriteKitScene?.childNode(withName: "Description") as? SKLabelNode
-        memeUnlocked = memeUnlocked + 1
         
-        Try2.text = "\(memeUnlocked)"
+//      passing information
+        // TODO: change the input in a dinamic way
         
-        //change image and description
-        memeImage?.texture = SKTexture(imageNamed: memeIdentifier.imageName)
-        memeText?.text = String(memeIdentifier.textMeme)
+        memeIdentifier.insert(WindowManager().ObjectToMeme(objectName: objectAnchor.name!), at: memeUnlocked)
+        
+//        change image and description
+        memeImage?.texture = SKTexture(imageNamed: memeIdentifier[memeUnlocked].imageName)
+        memeText?.text = String(memeIdentifier[memeUnlocked].textMeme)
+        
+//      preparing for next found object
+        memeUnlocked += 1
         
 //        create the 2d plane
         let plane = SCNPlane(width: 0.3 * 2, height: 0.15 * 1)
@@ -145,23 +153,24 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
             // what to do
             node.runAction(SCNAction.sequence([.wait(duration: 1),.fadeOut(duration: 2),.removeFromParentNode()]))
             
-//            let changeStoryboard = self.storyboard?.instantiateViewController(identifier: "ListOfMemes") as! CollectionManager
-
-//            self.present(changeStoryboard, animated: true, completion: nil)
-            
         }
         
     }
     
 //    MARK: - Transfer Information
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationController : CollectionManager = segue.destination as! CollectionManager
-        
-        destinationController.memeDetail = memeIdentifier
-        destinationController.memeFound = memeUnlocked
+    @IBAction func toCollection(_ sender: Any) {
+
+        performSegue(withIdentifier: "toMemeCollection", sender: self)
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! CollectionManager
+        vc.memeDetail = memeIdentifier
+        vc.memeFound = memeUnlocked
+    }
+    
     
 //    MARK: - Stuffs
     
