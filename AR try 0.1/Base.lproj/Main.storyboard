@@ -60,7 +60,7 @@
         <!--Collection Manager-->
         <scene sceneID="svB-pE-Jie">
             <objects>
-                <collectionViewController id="E5n-Ha-jff" customClass="CollectionManager" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="ListOfMemes" id="E5n-Ha-jff" customClass="CollectionManager" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lIY-Tm-SRw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,13 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="30" minY="70" maxX="30" maxY="20"/>
                         </collectionViewFlowLayout>
+                        <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p66-Xm-Gpk">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="02o-Nq-Zt6">
                                 <rect key="frame" x="30" y="70" width="167" height="167"/>
@@ -79,7 +86,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="167" height="167"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images-2" translatesAutoresizingMaskIntoConstraints="NO" id="VOD-gw-5KF">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="VOD-gw-5KF">
                                             <rect key="frame" x="0.0" y="0.0" width="167" height="133"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -103,6 +110,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="waf-ya-IQS"/>
+                    <connections>
+                        <outlet property="memes" destination="p66-Xm-Gpk" id="Wwr-W5-dsC"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yt8-UG-uqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,6 +120,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="images-2" width="260" height="194"/>
+        <image name="placeholder" width="565" height="313"/>
     </resources>
 </document>

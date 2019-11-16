@@ -15,6 +15,8 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
 //  MARK: - WIP
     
+    var memeUnlocked = 0
+    
     //decleration of label
     @IBOutlet weak var Try01: UILabel!
     @IBOutlet weak var Try2: UILabel!
@@ -23,8 +25,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     
     let configuration = ARWorldTrackingConfiguration()
-    
-    
+    var memeIdentifier : (imageName : String, textMeme : String) = ("a","a")
     
 //    MARK: - Init
     
@@ -89,10 +90,13 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         
         //declaration part
         
-        let memeIdentifier = WindowManager().ObjectToMeme(objectName: objectAnchor.referenceObject.name!)
+        memeIdentifier = WindowManager().ObjectToMeme(objectName: objectAnchor.referenceObject.name!)
         let spriteKitScene = SKScene(fileNamed: "Backpack.sks")
         let memeImage = spriteKitScene?.childNode(withName: "Meme") as? SKSpriteNode
         let memeText = spriteKitScene?.childNode(withName: "Description") as? SKLabelNode
+        memeUnlocked = memeUnlocked + 1
+        
+        Try2.text = "\(memeUnlocked)"
         
         //change image and description
         memeImage?.texture = SKTexture(imageNamed: memeIdentifier.imageName)
@@ -126,7 +130,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         self.sceneView.addGestureRecognizer(tapGestureRecognizer)
         
     }
-    
+ 
 //    when you touch the pop-up
     @objc func tapped(recognizer : UIGestureRecognizer){
         
@@ -141,7 +145,21 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
             // what to do
             node.runAction(SCNAction.sequence([.wait(duration: 1),.fadeOut(duration: 2),.removeFromParentNode()]))
             
+//            let changeStoryboard = self.storyboard?.instantiateViewController(identifier: "ListOfMemes") as! CollectionManager
+
+//            self.present(changeStoryboard, animated: true, completion: nil)
+            
         }
+        
+    }
+    
+//    MARK: - Transfer Information
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationController : CollectionManager = segue.destination as! CollectionManager
+        
+        destinationController.memeDetail = memeIdentifier
+        destinationController.memeFound = memeUnlocked
         
     }
     

@@ -8,11 +8,16 @@
 
 class WindowManager{
     
+    var imageName : String = ""
+    var textMeme : String = ""
+    
     func ObjectToMeme(objectName : String) -> (imageName : String, textMeme : String) {
         
         switch objectName {
         case "Cuffie2", "Cuffie" :
             return ("images-2.jpeg","Albertino \nAngela")
+        case "Scatola" :
+            return ("images-2.jpeg","Divulgazione")
         default:
             return ( "peppe" , "pluto" )
         }        
