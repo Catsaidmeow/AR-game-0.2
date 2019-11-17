@@ -93,8 +93,8 @@
                                             <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPI-qT-z3a">
-                                            <rect key="frame" x="-5" y="-5" width="177" height="177"/>
+                                        <button opaque="NO" tag="4" contentMode="redraw" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPI-qT-z3a">
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="167"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <connections>
                                                 <action selector="toInformation:" destination="E5n-Ha-jff" eventType="touchUpInside" id="2FR-Me-lSj"/>
@@ -118,12 +118,11 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yt8-UG-uqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="329"/>
+            <point key="canvasLocation" x="400.00000000000006" y="328.79464285714283"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="Gxz-ly-wrp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X6O-5w-NOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PopUpStoryboard" id="2C8-fz-21H" customClass="PopUpViewController" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MH2-el-yKR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -158,6 +157,7 @@
                         <outlet property="memeImage" destination="rAW-Pl-3F0" id="bKt-pJ-DmB"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6O-5w-NOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1382.608695652174" y="328.79464285714283"/>
         </scene>

@@ -18,7 +18,7 @@ class CollectionManager: UICollectionViewController {
     var implemented : Int = 0
     var buttonClicked : Int = 0
     var cellArray : [UICollectionViewCell] = [UICollectionViewCell()]
-    var memeDetail : [(imageName : String, textMeme : String)] = []
+    var memeDetail : [meme] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E0073E4A237C2FB5000DF58A /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0073E49237C2FB5000DF58A /* SceneManager.swift */; };
 		E0073E4C237C3001000DF58A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0073E4B237C3001000DF58A /* GameViewController.swift */; };
+		E0483F76238165AF00CD8B43 /* MemeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0483F75238165AF00CD8B43 /* MemeStruct.swift */; };
+		E0483F782381B69E00CD8B43 /* ObjectToMeme.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0483F772381B69E00CD8B43 /* ObjectToMeme.plist */; };
 		E0513CC7237EA9F1003C055C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E0513CC6237EA9F1003C055C /* .gitignore */; };
 		E0513CCD237EBE80003C055C /* CollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0513CCC237EBE80003C055C /* CollectionManager.swift */; };
 		E0513CCF237ECAF5003C055C /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0513CCE237ECAF5003C055C /* extension.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		E0073E49237C2FB5000DF58A /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		E0073E4B237C3001000DF58A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E0483F75238165AF00CD8B43 /* MemeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeStruct.swift; sourceTree = "<group>"; };
+		E0483F772381B69E00CD8B43 /* ObjectToMeme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ObjectToMeme.plist; path = "/Users/denyspashkov/Downloads/AR-game-0.2-master/AR try 0.1/AR try 0.1/ObjectToMeme.plist"; sourceTree = "<absolute>"; };
 		E0513CC6237EA9F1003C055C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E0513CCC237EBE80003C055C /* CollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
 		E0513CCE237ECAF5003C055C /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				E0513CCE237ECAF5003C055C /* extension.swift */,
+				E0483F75238165AF00CD8B43 /* MemeStruct.swift */,
 			);
 			name = Extensione;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			children = (
 				E0DBF50B23797F58005B4E0F /* Assets.xcassets */,
 				E0073E49237C2FB5000DF58A /* SceneManager.swift */,
+				E0483F772381B69E00CD8B43 /* ObjectToMeme.plist */,
 				E0DBF50823797F57005B4E0F /* Main.storyboard */,
 			);
 			name = "Data Managment";
@@ -283,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0DBF50A23797F57005B4E0F /* Main.storyboard in Resources */,
+				E0483F782381B69E00CD8B43 /* ObjectToMeme.plist in Resources */,
 				E0C93667237AB61A005F201C /* Scene01.scn in Resources */,
 				E0DBF50C23797F58005B4E0F /* Assets.xcassets in Resources */,
 				E0C93669237ACBD6005F201C /* Backpack.sks in Resources */,
@@ -313,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0073E4A237C2FB5000DF58A /* SceneManager.swift in Sources */,
+				E0483F76238165AF00CD8B43 /* MemeStruct.swift in Sources */,
 				E05CBD5C23808EDF00D54E2F /* PopUpViewController.swift in Sources */,
 				E0513CCD237EBE80003C055C /* CollectionManager.swift in Sources */,
 				E0073E4C237C3001000DF58A /* GameViewController.swift in Sources */,

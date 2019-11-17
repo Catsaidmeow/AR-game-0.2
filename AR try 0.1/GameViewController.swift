@@ -27,7 +27,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     
     let configuration = ARWorldTrackingConfiguration()
-    var memeIdentifier : [(imageName : String, textMeme : String)] = []
+    var memeIdentifier : [meme] = []
     
     
     
@@ -38,6 +38,13 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         
         gestureRecognizer()
         
+        let peppe = WindowManager()
+//        peppe.addMeme()
+//        peppe.addMeme()
+//        peppe.addMeme()
+        peppe.readArray()
+        peppe.seeArray()
+//        peppe.writeArray()
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -101,7 +108,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
 //      passing information
         // TODO: change the input in a dinamic way
         
-        memeIdentifier.insert(WindowManager().ObjectToMeme(objectName: objectAnchor.name!), at: memeUnlocked)
+        memeIdentifier.insert( WindowManager().ObjectToMeme(objectName: objectAnchor.name!) , at: memeUnlocked)
         
 //        change image and description
         memeImage?.texture = SKTexture(imageNamed: memeIdentifier[memeUnlocked].imageName)
