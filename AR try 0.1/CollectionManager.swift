@@ -11,22 +11,18 @@ import UIKit
 class CollectionManager: UICollectionViewController {
     
 //    MARK: - Init
-//    @IBOutlet weak var memes: UILabel!
     
-    var arrayDimension : Int = 0
-    var memeFound : Int = 0
+    var arrayCounter : Int = 0
     var implemented : Int = 0
     var buttonClicked : Int = 0
     var cellArray : [UICollectionViewCell] = [UICollectionViewCell()]
     var memeDetail : [meme] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         
-        while memeFound > implemented {
+        memeFoundUpdate()
+        
+        while memeDetail.count > implemented {
             
             changeMemeCell()
             implemented = implemented + 1
@@ -39,7 +35,49 @@ class CollectionManager: UICollectionViewController {
         super.didReceiveMemoryWarning()
     }
     
-//    MARK: - Data from ViewController are used here
+//        MARK: - Take Datas From Meme Found
+    
+    func memeFoundUpdate(){
+        
+        if  let archiveURL = Bundle.main.url(forResource: "MemeFound", withExtension: "plist"),
+        let retrivedNotesData = try? Data(contentsOf: archiveURL),
+        let decodedNotes = try? PropertyListDecoder().decode([meme].self, from: retrivedNotesData) {
+            
+            memeDetail = decodedNotes
+            
+        }
+    }
+
+//        MARK: - Manage the Collection
+        
+//        number of line
+        override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return GameViewController().returnNumber()
+        }
+        
+//        work with cell
+        override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            
+//        that's a cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as UICollectionViewCell
+            
+            cell.layer.cornerRadius = 10
+            
+            cellArray.insert(cell, at: arrayCounter)
+            let label = cellArray[arrayCounter].viewWithTag(2) as! UILabel
+            label.text = "To Unlock \(arrayCounter)"
+            
+            let popUpButton = cellArray[arrayCounter].viewWithTag(4) as! UIButton
+            
+            popUpButton.tag = popUpButton.tag + arrayCounter
+            
+            arrayCounter = arrayCounter + 1
+
+            return cell
+            
+        }
+    
+    //    MARK: - Manage Cells
 
     func changeMemeCell(){
         
@@ -50,40 +88,9 @@ class CollectionManager: UICollectionViewController {
         let memeDescription = cellArray[implemented].viewWithTag(2) as! UILabel
         memeDescription.text = "\(memeDetail[implemented].textMeme)"
         
-        
-        
     }
     
-//    MARK: - Manage the Collection
-    
-    //number of line
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return GameViewController().returnNumber()
-    }
-    
-    //work with cell
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-//        that's a cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as UICollectionViewCell
-        
-        cell.layer.cornerRadius = 10
-        
-        cellArray.insert(cell, at: arrayDimension)
-        let label = cellArray[arrayDimension].viewWithTag(2) as! UILabel
-        label.text = "To Unlock \(arrayDimension)"
-        
-        let popUpButton = cellArray[arrayDimension].viewWithTag(4) as! UIButton
-        
-        popUpButton.tag = popUpButton.tag + arrayDimension
-        
-        arrayDimension = arrayDimension + 1
-
-        return cell
-        
-    }
-    
-//    MARK: - buttons for popup
+//    MARK: - Segue managment
     
     @IBAction func toInformation(_ sender: AnyObject) {
 
@@ -108,24 +115,5 @@ class CollectionManager: UICollectionViewController {
         }
 
     }
-        
-//        @IBAction func showPopUp(_ sender: Any) {
-//
-//            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopUpStoryboard") as! PopUpViewController
-//
-//            let navigationController = UINavigationController(rootViewController: popOverVC)
-//
-//            navigationController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-//
-//            self.present(navigationController, animated: false, completion: nil)
-//
-////            self.addChild(popOverVC)
-////            popOverVC.view.frame = self.view.frame
-////            self.view.addSubview(popOverVC.view)
-////            popOverVC.didMove(toParent: self)
-//
-//        }
-    
-    
     
 }

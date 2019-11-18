@@ -8,6 +8,8 @@
 
 import UIKit
 
+//for manage easyer the main color of our aplication (i just wanted to create an extension,kinda childish right? )
+
 extension UIColor{
     
     static func rgb(red : CGFloat, green : CGFloat, blue : CGFloat) -> UIColor {

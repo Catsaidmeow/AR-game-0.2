@@ -14,14 +14,8 @@ import ARKit
 class GameViewController: UIViewController, ARSCNViewDelegate {
     
 //  MARK: - WIP
-    
-//    var collection : CollectionManager = CollectionManager()
 
     var memeUnlocked = 0
-    
-    //decleration of label
-    @IBOutlet weak var Try01: UILabel!
-    @IBOutlet weak var Try2: UILabel!
     
     //decleration of stuff from storyboard
     @IBOutlet weak var sceneView: ARSCNView!
@@ -29,7 +23,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     let configuration = ARWorldTrackingConfiguration()
     var memeIdentifier : [meme] = []
     
-    
+    let memesDatabase : MemesClass = MemesClass()
     
 //    MARK: - Init
     
@@ -38,18 +32,13 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         
         gestureRecognizer()
         
-        let peppe = WindowManager()
-//        peppe.addMeme()
-//        peppe.addMeme()
-//        peppe.addMeme()
-        peppe.readArray()
-        peppe.seeArray()
-//        peppe.writeArray()
+        memesDatabase.refreshArray()
+
         // Set the view's delegate
         sceneView.delegate = self
         
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        // Show statistics such as fps and timing information, pointless now
+        sceneView.showsStatistics = false
         
         //Create a new scene
         let scene = SCNScene(named : "Scene01.scn")!
@@ -90,8 +79,6 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
 
         }
         
-        Try01.text = "Found \(memeUnlocked+1)"
-        
         return node
 
     }
@@ -100,38 +87,37 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     func nodeAdded(_ node: SCNNode, for objectAnchor: ARObjectAnchor){
         
 //        //declaration part
-//        memeIdentifier[memeUnlocked] = WindowManager().ObjectToMeme(objectName: objectAnchor.referenceObject.name!)
         let spriteKitScene = SKScene(fileNamed: "Backpack.sks")
         let memeImage = spriteKitScene?.childNode(withName: "Meme") as? SKSpriteNode
         let memeText = spriteKitScene?.childNode(withName: "Description") as? SKLabelNode
         
 //      passing information
-        // TODO: change the input in a dinamic way
         
-        memeIdentifier.insert( WindowManager().ObjectToMeme(objectName: objectAnchor.name!) , at: memeUnlocked)
+        memeIdentifier.insert( memesDatabase.ObjectToMeme(objectName: objectAnchor.name!) , at: memeUnlocked)
         
 //        change image and description
+        
         memeImage?.texture = SKTexture(imageNamed: memeIdentifier[memeUnlocked].imageName)
         memeText?.text = String(memeIdentifier[memeUnlocked].textMeme)
         
 //      preparing for next found object
         memeUnlocked += 1
         
-//        create the 2d plane
+//      create the 2d plane
         let plane = SCNPlane(width: 0.3 * 2, height: 0.15 * 1)
         plane.cornerRadius = plane.width / 8
         plane.firstMaterial?.diffuse.contents = spriteKitScene
         plane.firstMaterial?.isDoubleSided = true
         plane.firstMaterial?.diffuse.contentsTransform = SCNMatrix4Translate(SCNMatrix4MakeScale(1, -1, 1), 0, 1, 0)
         
-//        put it in a 3d space
+//      put it in a 3d space
         let planeNode = SCNNode(geometry : plane)
         planeNode.position = SCNVector3(objectAnchor.referenceObject.center.x, objectAnchor.referenceObject.center.y + 0.35, objectAnchor.referenceObject.center.z)
     
         node.addChildNode(planeNode)
-//        node.geometry?.firstMaterial?.diffuse.contents = meme // to change
         
-        planeNode.runAction(SCNAction.sequence([.wait(duration: 15),.fadeOut(duration: 2),.removeFromParentNode()]))
+        // for not saturate the memory
+        planeNode.runAction(SCNAction.sequence([.wait(duration: 60),.fadeOut(duration: 1),.removeFromParentNode()]))
         
     }
     
@@ -157,7 +143,8 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
             
             let node = hitResult[0].node
             
-            // what to do
+//          action to do when pressed
+//          TODO: - add something more fancy
             node.runAction(SCNAction.sequence([.wait(duration: 1),.fadeOut(duration: 2),.removeFromParentNode()]))
             
         }
@@ -166,23 +153,18 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
 //    MARK: - Transfer Information
     
-    @IBAction func toCollection(_ sender: Any) {
-
-        performSegue(withIdentifier: "toMemeCollection", sender: self)
+    func saveMemeFound(){
+        
+        let archiveURL = Bundle.main.url(forResource: "MemeFound", withExtension: "plist")!
+        let encodedNotes = try? PropertyListEncoder().encode(memeIdentifier)
+        try? encodedNotes?.write(to: archiveURL, options: .noFileProtection)
         
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! CollectionManager
-        vc.memeDetail = memeIdentifier
-        vc.memeFound = memeUnlocked
-    }
-    
     
 //    MARK: - Stuffs
     
     // Present an error message to the user
-        func session(_ session: ARSession, didFailWithError error: Error) {}
+    func session(_ session: ARSession, didFailWithError error: Error) {}
     
     // Inform the user that the session hs been interrupted, for example, by presenting an overlay
     func sessionWasInterrupted(_ session: ARSession) {}

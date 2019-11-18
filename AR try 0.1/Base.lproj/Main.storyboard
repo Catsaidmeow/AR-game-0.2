@@ -20,27 +20,13 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5am-KU-1pO">
-                                <rect key="frame" x="235" y="44" width="159" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6be-kU-99w">
-                                <rect key="frame" x="20" y="47" width="374" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-pV-vSM">
                                 <rect key="frame" x="20" y="813" width="374" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="toCollection:" destination="BV1-FR-VrT" eventType="touchUpInside" id="gfI-KA-8ww"/>
+                                    <segue destination="E5n-Ha-jff" kind="show" id="YW1-Ue-B4t"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,10 +35,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="T5E-J5-NYw"/>
                     <connections>
-                        <outlet property="Try01" destination="6be-kU-99w" id="oR0-NY-Byr"/>
-                        <outlet property="Try2" destination="5am-KU-1pO" id="TDO-g0-mOW"/>
                         <outlet property="sceneView" destination="EEB-ju-Xxc" id="cEc-XD-ylu"/>
-                        <segue destination="E5n-Ha-jff" kind="show" identifier="toMemeCollection" id="HqI-A2-xZC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

@@ -15,6 +15,5 @@ struct meme : Codable{
     var memeName : String
     var objectName : String
     
-    
 }
 
