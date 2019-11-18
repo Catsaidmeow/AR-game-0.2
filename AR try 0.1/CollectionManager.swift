@@ -52,7 +52,7 @@ class CollectionManager: UICollectionViewController {
         
 //        number of line
         override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return GameViewController().returnNumber()
+            return GameViewController().returnNumber() + implemented
         }
         
 //        work with cell
