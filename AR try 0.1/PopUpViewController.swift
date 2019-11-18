@@ -15,8 +15,7 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var memeImage: UIImageView!
     @IBOutlet weak var memeDescription: UILabel!
     
-    var descriptionText: String = "Work in progress\nplease wait"
-    var imageName : String = "placeholder.jpeg"
+    var popUpMeme : meme = meme(imageName: "", textMeme: "", memeName: "", objectName: "")
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,8 +38,8 @@ class PopUpViewController: UIViewController {
     
     func setInformationView(){
         
-        memeDescription.text = descriptionText
-        memeImage.image = UIImage(named: imageName)
+        memeDescription.text = popUpMeme.textMeme
+        memeImage.image = UIImage(named: popUpMeme.imageName)
         
     }
     

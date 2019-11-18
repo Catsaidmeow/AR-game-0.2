@@ -104,14 +104,11 @@ class CollectionManager: UICollectionViewController {
         
         let nextScreen = segue.destination as! PopUpViewController
         if implemented > buttonClicked {
-            nextScreen.imageName = memeDetail[0].imageName
-            nextScreen.descriptionText = memeDetail[0].textMeme
+            nextScreen.popUpMeme = memeDetail[buttonClicked]
             
         }
         else{
-            nextScreen.imageName = "placeholder.jpeg"
-            nextScreen.descriptionText = "Work in progress\nplease wait"
-            
+           nextScreen.popUpMeme = meme(imageName: "placeholder.jpeg", textMeme: "Work in progress\nplease wait", memeName: "placeholder", objectName: "none")
         }
 
     }
