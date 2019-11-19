@@ -48,7 +48,7 @@
 		E0073E4B237C3001000DF58A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E046431C23823F3000175691 /* MemeFound.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MemeFound.plist; sourceTree = "<group>"; };
 		E0483F75238165AF00CD8B43 /* MemeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeStruct.swift; sourceTree = "<group>"; };
-		E0483F772381B69E00CD8B43 /* ObjectToMeme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ObjectToMeme.plist; path = "../../../../Users/denyspashkov/Downloads/AR-game-0.2-master/AR try 0.1/AR try 0.1/ObjectToMeme.plist"; sourceTree = DEVELOPER_DIR; };
+		E0483F772381B69E00CD8B43 /* ObjectToMeme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ObjectToMeme.plist; sourceTree = "<group>"; };
 		E0513CC6237EA9F1003C055C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E0513CCC237EBE80003C055C /* CollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
 		E0513CCE237ECAF5003C055C /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
