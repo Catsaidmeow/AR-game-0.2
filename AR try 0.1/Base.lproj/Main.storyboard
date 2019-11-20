@@ -20,17 +20,23 @@
                                 <rect key="frame" x="0.0" y="27" width="414" height="869"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-pV-vSM">
-                                <rect key="frame" x="20" y="813" width="374" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-pV-vSM">
+                                <rect key="frame" x="332" y="64" width="62" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tb8-ZJ-rT7"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="libraryIcon"/>
                                 <connections>
-                                    <segue destination="E5n-Ha-jff" kind="show" id="YW1-Ue-B4t"/>
+                                    <segue destination="E5n-Ha-jff" kind="show" id="nY8-4r-1qP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="h9Q-pV-vSM" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="332" id="KaZ-Ic-GHD"/>
+                            <constraint firstItem="h9Q-pV-vSM" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="NYE-d4-Qxx"/>
+                            <constraint firstItem="h9Q-pV-vSM" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="20" id="hOl-uK-rMa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <navigationItem key="navigationItem" id="T5E-J5-NYw"/>
@@ -146,6 +152,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="libraryIcon" width="512" height="512"/>
         <image name="placeholder" width="565" height="313"/>
     </resources>
 </document>
