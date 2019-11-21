@@ -4,51 +4,61 @@
 <array>
 	<dict>
 		<key>imageName</key>
-		<string>images-2.jpeg</string>
+		<string>box.jpeg</string>
 		<key>textMeme</key>
-		<string>Albertino Angela rimorchia</string>
+		<string>Me, also me: &quot;refers to the snowclone template &quot;Me: X Also me: Y.&quot; In the template, &quot;X&quot; represents something laudatory about one&apos;s self, while &quot;Y&quot; contradicts &quot;X.&quot; This meme is similar to Evil Kermit. The earliest known iteration appeared on March 29th, 2015, on Twitter</string>
 		<key>memeName</key>
-		<string>Divulgazione</string>
+		<string>Me every weekend</string>
 		<key>objectName</key>
 		<string>Caffe</string>
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string>images-2.jpeg</string>
+		<string>bottle.jpeg</string>
 		<key>textMeme</key>
-		<string>Albertino Angela rimorchia</string>
+		<string>It&apos;s a Surprise Tool That Will Helps Us Later: is a screenshot from the Disney Channel animated television series Mickey Mouse Clubhouse. The meme generally keeps the image of Mickey saying the line, &quot;it&apos;s a surprise tool that will help us later,&quot; while the caption indicates that the surprise tool is something outside the realm of the Disney universe. The cartoon series premiered on May 6th 2006, but it started to become viral in 2017</string>
 		<key>memeName</key>
-		<string>Divulgazione</string>
+		<string>Caesar&apos;s assassination</string>
 		<key>objectName</key>
 		<string>Spazzatura</string>
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string>images-2.jpeg</string>
+		<string>guitar.jpeg</string>
 		<key>textMeme</key>
-		<string>Albertino Angela rimorchia</string>
+		<string>Go Home, You Are Drunk: is an expression used to point out someone else&apos;s failure or misplaced objects, similar to other well-known dismissive statements like You&apos;re Doing It Wrong and Buzzkilling. The phrase is typically featured in image macros in which the subject is performing a task incorrectly or found in an out-of-place position. It became viral in 2012 </string>
 		<key>memeName</key>
-		<string>Divulgazione</string>
+		<string>Drunk guitar</string>
 		<key>objectName</key>
 		<string>Scatola</string>
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string>images-2.jpeg</string>
+		<string>trash1.jpeg</string>
 		<key>textMeme</key>
-		<string>Albertino Angela rimorchia</string>
+		<string>Know your fucking place, trash: refers to a memorable scene from a video by YouTuber Filthy Frank(05/04/2016). Online, still images from the video have been used as macros and exploitables. After one month people started to share this meme.</string>
 		<key>memeName</key>
-		<string>Divulgazione</string>
+		<string>Know your place</string>
 		<key>objectName</key>
 		<string>Cuffie</string>
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string>images-2.jpeg</string>
+		<string>water.jpeg</string>
 		<key>textMeme</key>
-		<string>Albertino Angela rimorchia</string>
+		<string>Scissors vs. Water: also known as Cutting Water With Scissors, refers to an exploitable stock image of a stream of tap water being cut by a pair of scissors. In January 2019, the image was circulated as an object-labeling meme illustrating various futile actions.</string>
 		<key>memeName</key>
-		<string>Divulgazione</string>
+		<string>Every gamers&apos; problem</string>
+		<key>objectName</key>
+		<string>Cuffie2</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>tablet.jpeg</string>
+		<key>textMeme</key>
+		<string>Tech Support Gandalf is an advice animal character based on a behind-the-scene photograph of British actor Ian McKellen using a laptop computer while dressed in his Gandalf costume on the set of the 2012 epic fantasy film The Hobbit. The series portrays the actor as a tech-savvy wizard who offers troubleshooting tips and commentaries on social media phenomena. This meme became viral in 2014</string>
+		<key>memeName</key>
+		<string>Gandalf </string>
 		<key>objectName</key>
 		<string>Cuffie2</string>
 	</dict>
