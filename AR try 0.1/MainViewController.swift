@@ -83,9 +83,8 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     func nodeAdded(_ node: SCNNode, for objectAnchor: ARObjectAnchor){
         
 //        //declaration part
-        let spriteKitScene = SKScene(fileNamed: "Backpack.sks")
+        let spriteKitScene = SKScene(fileNamed: "foundMemePopup.sks")
         let memeImage = spriteKitScene?.childNode(withName: "Meme") as? SKSpriteNode
-        let memeText = spriteKitScene?.childNode(withName: "Description") as? SKLabelNode
         
         let memeIndex: Int = Int(objectAnchor.referenceObject.name!)!
         
@@ -112,6 +111,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         // for not saturate the memory
         planeNode.runAction(SCNAction.sequence([.wait(duration: 60),.fadeOut(duration: 1),.removeFromParentNode()]))
         
+        // TODO: image is not shown anymore
     }
     
 //    MARK: - Gesture Managmemt
