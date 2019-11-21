@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import SpriteKit
 import SceneKit
 import ARKit
@@ -22,7 +23,6 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
     let configuration = ARWorldTrackingConfiguration()
     var memeIdentifier : [meme] = []
-    
     let memesDatabase : MemesClass = MemesClass()
     
 //    MARK: - Init
@@ -50,7 +50,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         // object to detect
         configuration.detectionObjects = ARReferenceObject.referenceObjects(inGroupNamed: "ToFind", bundle: Bundle.main)!
         
@@ -92,9 +92,30 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         let memeText = spriteKitScene?.childNode(withName: "Description") as? SKLabelNode
         
 //      passing information
+        print("peppe1")
+        let defaults = UserDefaults.standard
         
-        memeIdentifier.insert( memesDatabase.ObjectToMeme(objectName: objectAnchor.name!) , at: memeUnlocked)
+        print("peppe2")
+        if let actual = defaults.array(forKey: "savedMemes") as? [meme] {
+            print("peppe3")
+            memeIdentifier = actual
+            
+        }
+        else {
+            print("peppe3bis")
+            memeIdentifier = [meme]()
+            
+        }
+        print("peppe4")
         
+        memeIdentifier.insert(memesDatabase.ObjectToMeme(objectName: objectAnchor.name!), at: memeUnlocked)
+        
+        print("peppe5")
+        
+        defaults.setValue(memeIdentifier, forKey: "savedMemes")
+        
+//        defaults.set(memeIdentifier, forKey: "savedMemes")
+        print("peppe6")
 //        change image and description
         
         memeImage?.texture = SKTexture(imageNamed: memeIdentifier[memeUnlocked].imageName)
