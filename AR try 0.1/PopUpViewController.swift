@@ -13,9 +13,10 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var informationView: UIView!
     
     @IBOutlet weak var memeImage: UIImageView!
-    @IBOutlet weak var memeDescription: UILabel!
+    @IBOutlet weak var memeDescription: UITextView!
+    @IBOutlet weak var memeName: UILabel!
     
-    var popUpMeme : meme = meme(imageName: "", textMeme: "", memeName: "", objectName: "")
+    var popUpMeme : meme? = nil
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,7 +27,6 @@ class PopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         informationView.layer.cornerRadius = 20
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
@@ -38,8 +38,9 @@ class PopUpViewController: UIViewController {
     
     func setInformationView(){
         
-        memeDescription.text = popUpMeme.textMeme
-        memeImage.image = UIImage(named: popUpMeme.imageName)
+        memeDescription.text = popUpMeme!.textMeme
+        memeImage.image = UIImage(named: popUpMeme!.imageName)
+        memeName.text = popUpMeme!.memeName
         
     }
     
