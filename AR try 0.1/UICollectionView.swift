@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class collectionView : UIViewController , UICollectionViewDelegate, UICollectionViewDataSource{
     
@@ -15,12 +16,14 @@ class collectionView : UIViewController , UICollectionViewDelegate, UICollection
     var implemented : Int = 0
     var cellNumber : Int = 0
     var memeDetail : [meme] = []
+    let temp : meme = meme(imageName: "placeholder.jpeg", textMeme: "placeholder.jpeg", memeName: "placeholder.jpeg", objectName: "placeholder.jpeg")
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        memeFoundUpdate()
+        memeDetail = UserDefaults.standard.array(forKey: "savedMemes") as? [meme] ?? [meme]()
+//        memeFoundUpdate()
         
         while memeDetail.count > implemented {
             
@@ -96,16 +99,16 @@ class collectionView : UIViewController , UICollectionViewDelegate, UICollection
     
 //    MARK: - Take Dates From Meme Found (to change)
     
-    func memeFoundUpdate(){
-        
-        if  let archiveURL = Bundle.main.url(forResource: "MemeFound", withExtension: "plist"),
-        let retrivedNotesData = try? Data(contentsOf: archiveURL),
-        let decodedNotes = try? PropertyListDecoder().decode([meme].self, from: retrivedNotesData) {
-            
-            memeDetail = decodedNotes
-            
-        }
-    }
+//    func memeFoundUpdate(){
+//
+//        if  let archiveURL = Bundle.main.url(forResource: "MemeFound", withExtension: "plist"),
+//        let retrivedNotesData = try? Data(contentsOf: archiveURL),
+//        let decodedNotes = try? PropertyListDecoder().decode([meme].self, from: retrivedNotesData) {
+//
+//            memeDetail = decodedNotes
+//
+//        }
+//    }
     
 //    MARK: - Update meme when found
     
@@ -126,24 +129,30 @@ class collectionView : UIViewController , UICollectionViewDelegate, UICollection
     
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let cell = collectionView//.cellForItem(at: indexPath)
-
+            
             performSegue(withIdentifier: "toInformation", sender: cell)
+            
         }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        let nextScreen = segue.destination as! PopUpViewController
+        if segue.identifier == "toInformation"{
+            
+            let nextScreen = segue.destination as! PopUpViewController
+            
+            if memeDetail.count > (sender as AnyObject).tag {
+                
+                nextScreen.popUpMeme = memeDetail[(sender as AnyObject).tag]
+                
+            }
+            else {
+                
+                nextScreen.popUpMeme = meme(imageName: "placeholder.jpeg", textMeme: "placeholder.jpeg", memeName: "placeholder.jpeg", objectName: "placeholder.jpeg")
+                
+            }
+            
+        }
         
-        if memeDetail.count > (sender as AnyObject).tag {
-            
-            nextScreen.popUpMeme = memeDetail[(sender as AnyObject).tag]
-            
-        }
-        else {
-            
-            nextScreen.popUpMeme = meme(imageName: "placeholder.jpeg", textMeme: "placeholder.jpeg", memeName: "placeholder.jpeg", objectName: "placeholder.jpeg")
-            
-        }
 
     }
     

@@ -87,20 +87,31 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObF-DM-dNg">
+                                <rect key="frame" x="20" y="44" width="87" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="" id="Heo-fz-GvY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="qyL-dW-ssU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DCM-c1-U1H">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="vFK-12-PVH">
+                    <toolbarItems>
+                        <barButtonItem style="plain" id="vFK-12-PVH">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uqE-3z-8PT">
-                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <rect key="frame" x="20" y="12" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="DCM-c1-U1H"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="CWV-CP-kEw" id="J3Z-gf-1Z5"/>
                         <segue destination="2C8-fz-21H" kind="show" identifier="toInformation" id="1kt-df-yyd"/>
@@ -113,7 +124,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="BV1-FR-VrT" customClass="GameViewController" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,6 +147,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="N74-RZ-9gi"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="sceneView" destination="EEB-ju-Xxc" id="cEc-XD-ylu"/>
                     </connections>
@@ -199,17 +211,26 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="waf-ya-IQS">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="PNGIX.com_back-arrow-png_2677471" style="plain" id="Ml2-rC-mda">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hky-7S-9jN">
-                                <rect key="frame" x="20" y="7" width="270" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt; Back">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="small">
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                    </preferredSymbolConfiguration>
-                                </state>
-                            </button>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem style="plain" id="tD6-T6-J4l">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LbP-Cp-Cmj">
+                                    <rect key="frame" x="-23" y="-15" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="PNGIX.com_back-arrow-png_2677471" style="plain" id="Ml2-rC-mda">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hky-7S-9jN">
+                                    <rect key="frame" x="20" y="7" width="270" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="&lt; Back">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="small">
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                </button>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J2G-gA-2ch">
                             <rect key="frame" x="296" y="7" width="0.0" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
