@@ -16,6 +16,8 @@
 		E0513CCD237EBE80003C055C /* CollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0513CCC237EBE80003C055C /* CollectionManager.swift */; };
 		E0513CCF237ECAF5003C055C /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0513CCE237ECAF5003C055C /* extension.swift */; };
 		E05CBD5C23808EDF00D54E2F /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CBD5B23808EDF00D54E2F /* PopUpViewController.swift */; };
+		E09320F52385AD49004B6990 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09320F42385AD49004B6990 /* CollectionViewCell.swift */; };
+		E0C7AE02238585F100C28AB1 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AE01238585F100C28AB1 /* UICollectionView.swift */; };
 		E0C93667237AB61A005F201C /* Scene01.scn in Resources */ = {isa = PBXBuildFile; fileRef = E0C93666237AB61A005F201C /* Scene01.scn */; };
 		E0C93669237ACBD6005F201C /* Backpack.sks in Resources */ = {isa = PBXBuildFile; fileRef = E0C93668237ACBD6005F201C /* Backpack.sks */; };
 		E0DBF4FF23797F57005B4E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBF4FE23797F57005B4E0F /* AppDelegate.swift */; };
@@ -53,6 +55,8 @@
 		E0513CCC237EBE80003C055C /* CollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
 		E0513CCE237ECAF5003C055C /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		E05CBD5B23808EDF00D54E2F /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		E09320F42385AD49004B6990 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		E0C7AE01238585F100C28AB1 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		E0C93666237AB61A005F201C /* Scene01.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Scene01.scn; sourceTree = "<group>"; };
 		E0C93668237ACBD6005F201C /* Backpack.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Backpack.sks; sourceTree = "<group>"; };
 		E0DBF4FB23797F57005B4E0F /* AR try 0.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR try 0.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,8 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				E0073E4B237C3001000DF58A /* GameViewController.swift */,
-				E0513CCC237EBE80003C055C /* CollectionManager.swift */,
 				E05CBD5B23808EDF00D54E2F /* PopUpViewController.swift */,
+				E0C7AE01238585F100C28AB1 /* UICollectionView.swift */,
+				E0513CCC237EBE80003C055C /* CollectionManager.swift */,
+				E09320F42385AD49004B6990 /* CollectionViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -333,10 +339,12 @@
 			files = (
 				E0073E4A237C2FB5000DF58A /* StringToMeme.swift in Sources */,
 				E0483F76238165AF00CD8B43 /* MemeStruct.swift in Sources */,
+				E09320F52385AD49004B6990 /* CollectionViewCell.swift in Sources */,
 				E05CBD5C23808EDF00D54E2F /* PopUpViewController.swift in Sources */,
 				E0513CCD237EBE80003C055C /* CollectionManager.swift in Sources */,
 				E0073E4C237C3001000DF58A /* GameViewController.swift in Sources */,
 				E0513CCF237ECAF5003C055C /* extension.swift in Sources */,
+				E0C7AE02238585F100C28AB1 /* UICollectionView.swift in Sources */,
 				E0DBF4FF23797F57005B4E0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

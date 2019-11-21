@@ -22,6 +22,8 @@ class CollectionManager: UICollectionViewController {
         
         memeFoundUpdate()
         
+
+        
         while memeDetail.count > implemented {
             
             changeMemeCell()
