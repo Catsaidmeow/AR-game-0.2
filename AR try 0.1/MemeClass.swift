@@ -10,10 +10,13 @@ import UIKit
 
 class MemesClass {
     
-    var memeArray: [Meme] = [
-        Meme(imageName: "meme-image-1", description: "this is a test description", name: "Meme 1", hint: "Look behind the water thingy"),
-        Meme(imageName: "meme-image-2", description: "this is a test description", name: "Meme 2", hint: "meow"),
-        Meme(imageName: "meme-image-1", description: "Much book such knowlegde", name: "Doge", hint: "book"),
+    var memeDict: [Int:Meme] = [
+        0:
+            Meme(imageName: "meme-image-1", description: "this is a test description", name: "Meme 1", hint: "Look behind the water thingy"),
+        1:
+            Meme(imageName: "meme-image-2", description: "this is a test description", name: "Meme 2", hint: "meow"),
+        2:
+            Meme(imageName: "meme-image-1", description: "Much book such knowlegde", name: "Doge", hint: "book"),
     ]
     
     // save the index for the found meme in plist
@@ -23,9 +26,9 @@ class MemesClass {
         
         // store the index of the memes found
         var foundMemeNames: [Int] = []
-        for (index, meme) in memeArray.enumerated() {
+        for (key, meme) in memeDict {
             if meme.found {
-                foundMemeNames.append(index)
+                foundMemeNames.append(key)
             }
         }
         
@@ -42,7 +45,7 @@ class MemesClass {
             let foundIndecies = try? PropertyListDecoder().decode([Int].self, from: retrivedNotesData) {
             
             for index in foundIndecies {
-                memeArray[index].found = true
+                memeDict[index]!.found = true
             }
             
         }

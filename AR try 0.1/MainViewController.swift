@@ -84,13 +84,13 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         
 //        //declaration part
         let spriteKitScene = SKScene(fileNamed: "foundMemePopup.sks")
-        let memeImage = spriteKitScene?.childNode(withName: "Meme") as? SKSpriteNode
+        let memeImage = spriteKitScene?.childNode(withName: "MemeImage") as? SKSpriteNode
         
         let memeIndex: Int = Int(objectAnchor.referenceObject.name!)!
         
         
-        if !memeDatabase.memeArray[memeIndex].found {
-            memeDatabase.memeArray[memeIndex].found = true
+        if !memeDatabase.memeDict[memeIndex]!.found {
+            memeDatabase.memeDict[memeIndex]!.found = true
             memeDatabase.storeFoundMeme()
             print("Storing \(memeIndex)")
         }

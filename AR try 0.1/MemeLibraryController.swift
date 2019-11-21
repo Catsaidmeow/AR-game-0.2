@@ -32,7 +32,7 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return memeDatabase.memeArray.count /// return the amount of memes stored to set the amount of cells
+        return memeDatabase.memeDict.keys.count /// return the amount of memes stored to set the amount of cells
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -41,7 +41,7 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
         
         
         cell.tag = cellNumber
-        cell.memeAllocated = memeDatabase.memeArray[cellNumber]
+        cell.memeAllocated = memeDatabase.memeDict[cellNumber]!
         cell.memeName.text = cell.memeAllocated!.name
         
         //        print(cell.tag)
@@ -65,7 +65,7 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
     //    MARK: - Call the performSegue here
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)!
-        if memeDatabase.memeArray[cell.tag].found { /// only show popup if a found meme was clicked
+        if memeDatabase.memeDict[cell.tag]!.found { /// only show popup if a found meme was clicked
             performSegue(withIdentifier: "toInformation", sender: cell)
         }
     }
@@ -75,7 +75,7 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
         if segue.identifier == "toInformation"{
             
             let nextScreen = segue.destination as! MemeInformationPopupController
-            nextScreen.popUpMeme = memeDatabase.memeArray[(sender as AnyObject).tag as Int]
+            nextScreen.popUpMeme = memeDatabase.memeDict[(sender as AnyObject).tag as Int]!
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF88F24B238715D5002F83A8 /* ObjectToMeme.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF88F24A238715D5002F83A8 /* ObjectToMeme.plist */; };
 		E0073E4A237C2FB5000DF58A /* MemeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0073E49237C2FB5000DF58A /* MemeClass.swift */; };
 		E0073E4C237C3001000DF58A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0073E4B237C3001000DF58A /* MainViewController.swift */; };
 		E0483F76238165AF00CD8B43 /* MemeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0483F75238165AF00CD8B43 /* MemeStruct.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF88F24A238715D5002F83A8 /* ObjectToMeme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ObjectToMeme.plist; sourceTree = "<group>"; };
 		E0073E49237C2FB5000DF58A /* MemeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeClass.swift; sourceTree = "<group>"; };
 		E0073E4B237C3001000DF58A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E0483F75238165AF00CD8B43 /* MemeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeStruct.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				E0483F772381B69E00CD8B43 /* FoundMemes.plist */,
+				BF88F24A238715D5002F83A8 /* ObjectToMeme.plist */,
 			);
 			name = "Plist Files";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				E0DBF50A23797F57005B4E0F /* Main.storyboard in Resources */,
 				E0483F782381B69E00CD8B43 /* FoundMemes.plist in Resources */,
+				BF88F24B238715D5002F83A8 /* ObjectToMeme.plist in Resources */,
 				E0C93667237AB61A005F201C /* main.scn in Resources */,
 				E0DBF50C23797F58005B4E0F /* Assets.xcassets in Resources */,
 				E0C93669237ACBD6005F201C /* foundMemePopup.sks in Resources */,
