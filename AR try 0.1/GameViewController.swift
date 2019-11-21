@@ -22,7 +22,6 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
     let configuration = ARWorldTrackingConfiguration()
     var memeIdentifier : [meme] = []
-    
     let memesDatabase : MemesClass = MemesClass()
     
 //    MARK: - Init
@@ -50,7 +49,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         // object to detect
         configuration.detectionObjects = ARReferenceObject.referenceObjects(inGroupNamed: "ToFind", bundle: Bundle.main)!
         

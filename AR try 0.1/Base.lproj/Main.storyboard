@@ -8,16 +8,118 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="XkD-UG-wtw">
+            <objects>
+                <viewController id="dBw-OW-wgC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yab-xu-6dl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6l6-dC-SZ6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4p0-7L-9vE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520" y="1111"/>
+        </scene>
+        <!--Collection View-->
+        <scene sceneID="Pf0-fe-IvI">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="PiK-wW-Jzz" customClass="collectionView" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gFk-HZ-HPh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CWV-CP-kEw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A9V-gp-K7D">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="estimatedItemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="2" minY="20" maxX="2" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="f0j-qh-PPl" customClass="CollectionViewCell" customModule="AR_try_0_1" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="20" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="418-EG-iZ0">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDc-Bj-oK9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="memeImageView" destination="gDc-Bj-oK9" id="MW6-3l-Fzo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="589-qb-I12">
+                                        <rect key="frame" x="212" y="20" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vxX-Ls-NLl">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jtg-7V-q3f">
+                                        <rect key="frame" x="2" y="230" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5AL-RG-wp5">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="T9X-vB-szf">
+                                        <rect key="frame" x="212" y="230" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WQ6-aG-6SZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qyL-dW-ssU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DCM-c1-U1H">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="vFK-12-PVH">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uqE-3z-8PT">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="CWV-CP-kEw" id="J3Z-gf-1Z5"/>
+                        <segue destination="2C8-fz-21H" kind="show" identifier="toInformation" id="1kt-df-yyd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zQ-vo-nSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424.63768115942031" y="1110.9375"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEB-ju-Xxc">
-                                <rect key="frame" x="0.0" y="27" width="414" height="869"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-pV-vSM">
@@ -26,14 +128,14 @@
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="E5n-Ha-jff" kind="show" id="YW1-Ue-B4t"/>
+                                    <segue destination="PiK-wW-Jzz" kind="show" id="s3O-rp-7po"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="T5E-J5-NYw"/>
+                    <navigationItem key="navigationItem" id="N74-RZ-9gi"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="sceneView" destination="EEB-ju-Xxc" id="cEc-XD-ylu"/>
                     </connections>
@@ -45,9 +147,9 @@
         <!--Collection Manager-->
         <scene sceneID="svB-pE-Jie">
             <objects>
-                <collectionViewController storyboardIdentifier="ListOfMemes" id="E5n-Ha-jff" customClass="CollectionManager" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="ListOfMemes" modalPresentationStyle="overFullScreen" interfaceStyle="dark" id="E5n-Ha-jff" customClass="CollectionManager" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lIY-Tm-SRw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BLK-Cm-n1J">
@@ -77,7 +179,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" tag="4" contentMode="redraw" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPI-qT-z3a">
-                                            <rect key="frame" x="0.0" y="0.0" width="167" height="167"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="357" height="167"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <connections>
                                                 <action selector="toInformation:" destination="E5n-Ha-jff" eventType="touchUpInside" id="2FR-Me-lSj"/>
@@ -94,19 +196,43 @@
                             <outlet property="delegate" destination="E5n-Ha-jff" id="Qs6-Wg-m0W"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="waf-ya-IQS"/>
-                    <connections>
-                        <segue destination="2C8-fz-21H" kind="presentation" identifier="toInformation" modalPresentationStyle="overFullScreen" id="Uig-8M-pZy"/>
-                    </connections>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="waf-ya-IQS">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="PNGIX.com_back-arrow-png_2677471" style="plain" id="Ml2-rC-mda">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hky-7S-9jN">
+                                <rect key="frame" x="20" y="7" width="270" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; Back">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="small">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J2G-gA-2ch">
+                            <rect key="frame" x="296" y="7" width="0.0" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZhY-q6-0gl">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Lf-SJ-zEM">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yt8-UG-uqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400.00000000000006" y="328.79464285714283"/>
+            <point key="canvasLocation" x="426" y="329"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="Gxz-ly-wrp">
             <objects>
-                <viewController storyboardIdentifier="PopUpStoryboard" id="2C8-fz-21H" customClass="PopUpViewController" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopUpStoryboard" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="2C8-fz-21H" customClass="PopUpViewController" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MH2-el-yKR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,6 +260,7 @@
                         <viewLayoutGuide key="safeArea" id="QQa-2X-EtK"/>
                     </view>
                     <navigationItem key="navigationItem" id="gJD-Kd-WrE"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="informationView" destination="gHl-jf-JeX" id="vQ4-KN-QWA"/>
                         <outlet property="memeDescription" destination="sRx-r4-Ggj" id="ck8-1v-VGm"/>
@@ -142,10 +269,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6O-5w-NOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1382.608695652174" y="328.79464285714283"/>
+            <point key="canvasLocation" x="1320" y="329"/>
         </scene>
     </scenes>
     <resources>
+        <image name="PNGIX.com_back-arrow-png_2677471" width="578" height="980"/>
         <image name="placeholder" width="565" height="313"/>
     </resources>
 </document>
