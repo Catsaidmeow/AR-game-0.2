@@ -133,16 +133,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-pV-vSM">
-                                <rect key="frame" x="20" y="813" width="374" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-pV-vSM">
+                                <rect key="frame" x="298" y="44" width="96" height="87"/>
+                                <state key="normal" title="Button" image="libraryIcon"/>
                                 <connections>
                                     <segue destination="PiK-wW-Jzz" kind="show" id="s3O-rp-7po"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="h9Q-pV-vSM" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="Mdc-hf-Rpr"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="h9Q-pV-vSM" secondAttribute="bottom" constant="731" id="Mr7-fG-ZON"/>
+                            <constraint firstItem="h9Q-pV-vSM" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="298" id="MxI-ff-zNI"/>
+                            <constraint firstItem="h9Q-pV-vSM" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="hg3-es-9i1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <navigationItem key="navigationItem" id="N74-RZ-9gi"/>
@@ -214,14 +218,14 @@
                         <leftBarButtonItems>
                             <barButtonItem style="plain" id="tD6-T6-J4l">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LbP-Cp-Cmj">
-                                    <rect key="frame" x="-23" y="-15" width="92" height="30"/>
+                                    <rect key="frame" x="20" y="7" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                 </button>
                             </barButtonItem>
                             <barButtonItem title="Item" image="PNGIX.com_back-arrow-png_2677471" style="plain" id="Ml2-rC-mda">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hky-7S-9jN">
-                                    <rect key="frame" x="20" y="7" width="270" height="30"/>
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hky-7S-9jN">
+                                    <rect key="frame" x="112" y="7" width="178" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="&lt; Back">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="small">
@@ -295,6 +299,7 @@
     </scenes>
     <resources>
         <image name="PNGIX.com_back-arrow-png_2677471" width="578" height="980"/>
+        <image name="libraryIcon" width="512" height="512"/>
         <image name="placeholder" width="565" height="313"/>
     </resources>
 </document>
