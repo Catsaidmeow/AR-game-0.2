@@ -79,21 +79,21 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
 
     }
     
-//    add pop-up
+    // pop up appearing over the found object
     func nodeAdded(_ node: SCNNode, for objectAnchor: ARObjectAnchor){
         
-//        //declaration part
         let spriteKitScene = SKScene(fileNamed: "foundMemePopup.sks")
         let memeImage = spriteKitScene?.childNode(withName: "MemeImage") as? SKSpriteNode
         
         let memeIndex: Int = Int(objectAnchor.referenceObject.name!)!
-        
         
         if !memeDatabase.memeDict[memeIndex]!.found {
             memeDatabase.memeDict[memeIndex]!.found = true
             memeDatabase.storeFoundMeme()
             print("Storing \(memeIndex)")
         }
+        
+        memeImage?.texture = SKTexture(imageNamed: memeDatabase.memeDict[memeIndex]!.imageName)
         
 //      create the 2d plane
         let plane = SCNPlane(width: 0.3 * 2, height: 0.15 * 1)
