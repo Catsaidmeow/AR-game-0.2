@@ -10,10 +10,10 @@ import UIKit
 
 struct meme : Codable{
 
-    var imageName : String
-    var textMeme : String
-    var memeName : String
-    var objectName : String
+    var imageName : String /// name of the meme image
+    var textMeme : String /// description of meme
+    var memeName : String /// name of meme
+    var objectName : String /// identificable meme key
     
 }
 
