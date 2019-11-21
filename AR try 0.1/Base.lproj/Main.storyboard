@@ -9,21 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="XkD-UG-wtw">
-            <objects>
-                <viewController id="dBw-OW-wgC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Yab-xu-6dl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6l6-dC-SZ6"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4p0-7L-9vE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-520" y="1111"/>
-        </scene>
         <!--Collection View-->
         <scene sceneID="Pf0-fe-IvI">
             <objects>
@@ -96,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zQ-vo-nSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424.63768115942031" y="1110.9375"/>
+            <point key="canvasLocation" x="388" y="337"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -112,7 +97,7 @@
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-pV-vSM">
                                 <rect key="frame" x="298" y="44" width="96" height="87"/>
-                                <state key="normal" title="Button" image="libraryIcon"/>
+                                <state key="normal" title="Button" image="librarybutton"/>
                                 <connections>
                                     <segue destination="PiK-wW-Jzz" kind="show" id="s3O-rp-7po"/>
                                 </connections>
@@ -135,101 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-520.28985507246375" y="328.79464285714283"/>
-        </scene>
-        <!--Collection Manager-->
-        <scene sceneID="svB-pE-Jie">
-            <objects>
-                <collectionViewController storyboardIdentifier="ListOfMemes" modalPresentationStyle="overFullScreen" interfaceStyle="dark" id="E5n-Ha-jff" customClass="CollectionManager" customModule="AR_try_0_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lIY-Tm-SRw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BLK-Cm-n1J">
-                            <size key="itemSize" width="167" height="167"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="30" minY="70" maxX="30" maxY="20"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="02o-Nq-Zt6">
-                                <rect key="frame" x="30" y="70" width="167" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4pt-pP-ngQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="167" height="167"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="VOD-gw-5KF">
-                                            <rect key="frame" x="0.0" y="0.0" width="167" height="133"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TS-AP-e0a">
-                                            <rect key="frame" x="0.0" y="133" width="167" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                            <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="21"/>
-                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" tag="4" contentMode="redraw" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPI-qT-z3a">
-                                            <rect key="frame" x="0.0" y="0.0" width="357" height="167"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <connections>
-                                                <action selector="toInformation:" destination="E5n-Ha-jff" eventType="touchUpInside" id="2FR-Me-lSj"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </collectionViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="customSize" width="167" height="167"/>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="E5n-Ha-jff" id="5KA-Tx-70L"/>
-                            <outlet property="delegate" destination="E5n-Ha-jff" id="Qs6-Wg-m0W"/>
-                        </connections>
-                    </collectionView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="waf-ya-IQS">
-                        <nil key="title"/>
-                        <leftBarButtonItems>
-                            <barButtonItem style="plain" id="tD6-T6-J4l">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LbP-Cp-Cmj">
-                                    <rect key="frame" x="20" y="7" width="92" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="PNGIX.com_back-arrow-png_2677471" style="plain" id="Ml2-rC-mda">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hky-7S-9jN">
-                                    <rect key="frame" x="112" y="7" width="178" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="&lt; Back">
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="small">
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        </preferredSymbolConfiguration>
-                                    </state>
-                                </button>
-                            </barButtonItem>
-                        </leftBarButtonItems>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J2G-gA-2ch">
-                            <rect key="frame" x="296" y="7" width="0.0" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                        </button>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZhY-q6-0gl">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Lf-SJ-zEM">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yt8-UG-uqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="426" y="329"/>
+            <point key="canvasLocation" x="-629" y="353"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="Gxz-ly-wrp">
@@ -283,9 +174,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PNGIX.com_back-arrow-png_2677471" width="578" height="980"/>
-        <image name="libraryIcon" width="512" height="512"/>
-        <image name="placeholder" width="565" height="313"/>
+        <image name="librarybutton" width="1165" height="1166"/>
         <namedColor name="Main Colour">
             <color red="0.92941176470588238" green="0.69803921568627447" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

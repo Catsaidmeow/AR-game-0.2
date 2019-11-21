@@ -13,7 +13,6 @@
 		E0483F76238165AF00CD8B43 /* MemeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0483F75238165AF00CD8B43 /* MemeStruct.swift */; };
 		E0483F782381B69E00CD8B43 /* ObjectToMeme.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0483F772381B69E00CD8B43 /* ObjectToMeme.plist */; };
 		E0513CC7237EA9F1003C055C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E0513CC6237EA9F1003C055C /* .gitignore */; };
-		E0513CCD237EBE80003C055C /* CollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0513CCC237EBE80003C055C /* CollectionManager.swift */; };
 		E05CBD5C23808EDF00D54E2F /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CBD5B23808EDF00D54E2F /* PopUpViewController.swift */; };
 		E09320F52385AD49004B6990 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09320F42385AD49004B6990 /* CollectionViewCell.swift */; };
 		E0C7AE02238585F100C28AB1 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7AE01238585F100C28AB1 /* UICollectionView.swift */; };
@@ -51,7 +50,6 @@
 		E0483F75238165AF00CD8B43 /* MemeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeStruct.swift; sourceTree = "<group>"; };
 		E0483F772381B69E00CD8B43 /* ObjectToMeme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ObjectToMeme.plist; sourceTree = "<group>"; };
 		E0513CC6237EA9F1003C055C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		E0513CCC237EBE80003C055C /* CollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
 		E05CBD5B23808EDF00D54E2F /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		E09320F42385AD49004B6990 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E0C7AE01238585F100C28AB1 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				E0073E4B237C3001000DF58A /* GameViewController.swift */,
 				E05CBD5B23808EDF00D54E2F /* PopUpViewController.swift */,
 				E0C7AE01238585F100C28AB1 /* UICollectionView.swift */,
-				E0513CCC237EBE80003C055C /* CollectionManager.swift */,
 				E09320F42385AD49004B6990 /* CollectionViewCell.swift */,
 			);
 			name = Controllers;
@@ -338,7 +335,6 @@
 				E0483F76238165AF00CD8B43 /* MemeStruct.swift in Sources */,
 				E09320F52385AD49004B6990 /* CollectionViewCell.swift in Sources */,
 				E05CBD5C23808EDF00D54E2F /* PopUpViewController.swift in Sources */,
-				E0513CCD237EBE80003C055C /* CollectionManager.swift in Sources */,
 				E0073E4C237C3001000DF58A /* GameViewController.swift in Sources */,
 				E0C7AE02238585F100C28AB1 /* UICollectionView.swift in Sources */,
 				E0DBF4FF23797F57005B4E0F /* AppDelegate.swift in Sources */,
