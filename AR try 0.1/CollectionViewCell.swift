@@ -12,5 +12,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     var memeAllocated : meme = meme(imageName: "", textMeme: "", memeName: "", objectName: "")
     @IBOutlet weak var memeImageView: UIImageView!
+    @IBOutlet weak var memeName: UILabel!
+    @IBOutlet weak var memeHint: UILabel!
     
 }

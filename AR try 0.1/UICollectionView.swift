@@ -57,7 +57,7 @@ class collectionView : UIViewController , UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -82,7 +82,7 @@ class collectionView : UIViewController , UICollectionViewDelegate, UICollection
     func cellWithFoundMeme( cell : CollectionViewCell) -> CollectionViewCell{
         
         cell.memeImageView.image = UIImage(named: cell.memeAllocated.imageName)
-        
+        cell.memeName.text = cell.memeAllocated.memeName
         return cell
         
     }

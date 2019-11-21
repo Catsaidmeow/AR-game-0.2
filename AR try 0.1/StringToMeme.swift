@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemesClass{
+class MemesClass {
  
     var memeArray : [meme] = []
     
