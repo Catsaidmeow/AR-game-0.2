@@ -51,7 +51,7 @@ class MemesClass {
             let foundIndecies = try? PropertyListDecoder().decode([Int].self, from: retrivedNotesData) {
             
             for index in foundIndecies {
-                memeDict[index]!.found = true
+                memeDict[Int(index)]!.found = true
             }
             
         }
