@@ -59,7 +59,7 @@
 		E0C7AE01238585F100C28AB1 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		E0C93666237AB61A005F201C /* Scene01.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Scene01.scn; sourceTree = "<group>"; };
 		E0C93668237ACBD6005F201C /* Backpack.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Backpack.sks; sourceTree = "<group>"; };
-		E0DBF4FB23797F57005B4E0F /* AR try 0.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR try 0.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0DBF4FB23797F57005B4E0F /* MemeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0DBF4FE23797F57005B4E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0DBF50923797F57005B4E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0DBF50B23797F58005B4E0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		E0DBF4FC23797F57005B4E0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E0DBF4FB23797F57005B4E0F /* AR try 0.1.app */,
+				E0DBF4FB23797F57005B4E0F /* MemeGo.app */,
 				E0DBF51523797F58005B4E0F /* AR try 0.1Tests.xctest */,
 				E0DBF52023797F58005B4E0F /* AR try 0.1UITests.xctest */,
 			);
@@ -218,7 +218,7 @@
 			);
 			name = "AR try 0.1";
 			productName = "AR try 0.1";
-			productReference = E0DBF4FB23797F57005B4E0F /* AR try 0.1.app */;
+			productReference = E0DBF4FB23797F57005B4E0F /* MemeGo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E0DBF51423797F58005B4E0F /* AR try 0.1Tests */ = {
@@ -526,7 +526,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AcademyTest.Tris;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MemeGo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -544,7 +544,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AcademyTest.Tris;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MemeGo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
