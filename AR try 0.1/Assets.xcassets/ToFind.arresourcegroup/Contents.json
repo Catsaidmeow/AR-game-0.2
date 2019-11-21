@@ -5,22 +5,13 @@
   },
   "resources" : [
     {
-      "filename" : "BackPack.arobject"
+      "filename" : "0.arobject"
     },
     {
-      "filename" : "Caffe.arobject"
+      "filename" : "1.arobject"
     },
     {
-      "filename" : "Cuffie.arobject"
-    },
-    {
-      "filename" : "Cuffie2.arobject"
-    },
-    {
-      "filename" : "Scatola.arobject"
-    },
-    {
-      "filename" : "Spazzatura.arobject"
+      "filename" : "2.arobject"
     }
   ]
 }
