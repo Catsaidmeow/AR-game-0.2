@@ -92,7 +92,6 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         if !memeDatabase.memeDict[memeIndex]!.found {
             memeDatabase.memeDict[memeIndex]!.found = true
             memeDatabase.storeFoundMeme()
-            print("Storing \(memeIndex)")
         }
         
         memeImage?.texture = SKTexture(imageNamed: memeDatabase.memeDict[memeIndex]!.imageName)

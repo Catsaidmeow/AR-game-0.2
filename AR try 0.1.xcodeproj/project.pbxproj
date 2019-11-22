@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF88F24F23871AC7002F83A8 /* FoundMemes.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF88F24E23871AC7002F83A8 /* FoundMemes.plist */; };
 		E0073E4A237C2FB5000DF58A /* MemeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0073E49237C2FB5000DF58A /* MemeClass.swift */; };
 		E0073E4C237C3001000DF58A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0073E4B237C3001000DF58A /* MainViewController.swift */; };
 		E0483F76238165AF00CD8B43 /* MemeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0483F75238165AF00CD8B43 /* MemeStruct.swift */; };
@@ -43,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BF88F24E23871AC7002F83A8 /* FoundMemes.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FoundMemes.plist; sourceTree = "<group>"; };
 		E0073E49237C2FB5000DF58A /* MemeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeClass.swift; sourceTree = "<group>"; };
 		E0073E4B237C3001000DF58A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E0483F75238165AF00CD8B43 /* MemeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeStruct.swift; sourceTree = "<group>"; };
@@ -92,14 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E046431E23823F4700175691 /* Plist Files */ = {
-			isa = PBXGroup;
-			children = (
-				BF88F24E23871AC7002F83A8 /* FoundMemes.plist */,
-			);
-			name = "Plist Files";
-			sourceTree = "<group>";
-		};
 		E05CBD5E2380901B00D54E2F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +112,6 @@
 		E05CBD602380C16A00D54E2F /* Files Managment */ = {
 			isa = PBXGroup;
 			children = (
-				E046431E23823F4700175691 /* Plist Files */,
 				E0073E49237C2FB5000DF58A /* MemeClass.swift */,
 				E0DBF50B23797F58005B4E0F /* Assets.xcassets */,
 			);
@@ -296,7 +285,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF88F24F23871AC7002F83A8 /* FoundMemes.plist in Resources */,
 				E0DBF50A23797F57005B4E0F /* Main.storyboard in Resources */,
 				E0C93667237AB61A005F201C /* main.scn in Resources */,
 				E0DBF50C23797F58005B4E0F /* Assets.xcassets in Resources */,
