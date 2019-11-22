@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class MemesClass {
     
@@ -22,41 +23,53 @@ class MemesClass {
         4:
             Meme(imageName: "water", description: "Scissors vs. Water: also known as Cutting Water With Scissors, refers to an exploitable stock image of a stream of tap water being cut by a pair of scissors. In January 2019, the image was circulated as an object-labeling meme illustrating various futile actions.", name: "Every gamers' problem", hint: "--"),
         5:
-            Meme(imageName: "tablet", description: "Tech Support Gandalf is an advice animal character based on a behind-the-scene photograph of British actor Ian McKellen using a laptop computer while dressed in his Gandalf costume on the set of the 2012 epic fantasy film The Hobbit. The series portrays the actor as a tech-savvy wizard who offers troubleshooting tips and commentaries on social media phenomena. This meme became viral in 2014", name: "Gandalf ", hint: "--")
+            Meme(imageName: "tablet", description: "Tech Support Gandalf is an advice animal character based on a behind-the-scene photograph of British actor Ian McKellen using a laptop computer while dressed in his Gandalf costume on the set of the 2012 epic fantasy film The Hobbit. The series portrays the actor as a tech-savvy wizard who offers troubleshooting tips and commentaries on social media phenomena. This meme became viral in 2014", name: "Gandalf ", hint: "")
     ]
     
     // save the index for the found meme in plist
     func storeFoundMeme(){
         
-        let archiveURL = Bundle.main.url(forResource: "FoundMemes", withExtension: "plist")!
+        var foundList : [Bool] = []
         
-        // store the index of the memes found
-        var foundMemeNames: [Int] = []
-        for (key, meme) in memeDict {
-            if meme.found {
-                foundMemeNames.append(key)
-            }
+        let defaults = UserDefaults.standard
+        for index in 0...memeDatabase.memeDict.count - 1 {
+                
+                foundList.insert(memeDatabase.memeDict[index]!.found, at: index)
+            
         }
         
-        let encoded = try? PropertyListEncoder().encode(foundMemeNames)
-        try? encoded?.write(to: archiveURL, options: .noFileProtection)
+        print(foundList)
+        
+        defaults.set(foundList, forKey: "FoundMemes")
         
     }
     
     // load found memes from plist file and set found to true
-    func loadFoundMemes(){
+    func loadFoundMemes() {
         
-        if  let archiveURL = Bundle.main.url(forResource: "FoundMemes", withExtension: "plist"),
-            let retrivedNotesData = try? Data(contentsOf: archiveURL),
-            let foundIndecies = try? PropertyListDecoder().decode([Int].self, from: retrivedNotesData) {
+        print("primus")
+        
+        let defaults = UserDefaults.standard
+        let seenMeme = defaults.array(forKey: "FoundMemes") as? [Bool] ?? []
+        print(seenMeme.count)
+        
+        if seenMeme.count == 0 {
             
-            for index in foundIndecies {
-                memeDict[Int(index)]!.found = true
+            for index in 0...memeDatabase.memeDict.count - 1 {
+                
+                memeDatabase.memeDict[index]!.found = false
+                
             }
+        } else {
             
+            for index in 0...memeDatabase.memeDict.count - 1 {
+                
+                memeDatabase.memeDict[index]!.found = seenMeme[index]
+                
+            }
         }
     }
-    
 }
 
 let memeDatabase = MemesClass()
+//

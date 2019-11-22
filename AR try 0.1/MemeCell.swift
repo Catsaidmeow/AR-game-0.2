@@ -10,6 +10,7 @@ import UIKit
 
 class MemeCell: UICollectionViewCell {
     
+    @IBOutlet weak var memeFrame: UIImageView!
     var memeAllocated : Meme? = nil
     @IBOutlet weak var memeImageView: UIImageView!
     @IBOutlet weak var memeName: UILabel!

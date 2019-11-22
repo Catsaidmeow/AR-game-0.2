@@ -51,6 +51,5 @@ class MemeInformationPopupController: UIViewController {
         }
     }
 
-
-
 }
+
