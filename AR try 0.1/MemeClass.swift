@@ -38,8 +38,6 @@ class MemesClass {
             
         }
         
-        print(foundList)
-        
         defaults.set(foundList, forKey: "FoundMemes")
         
     }
@@ -47,11 +45,8 @@ class MemesClass {
     // load found memes from plist file and set found to true
     func loadFoundMemes() {
         
-        print("primus")
-        
         let defaults = UserDefaults.standard
         let seenMeme = defaults.array(forKey: "FoundMemes") as? [Bool] ?? []
-        print(seenMeme.count)
         
         if seenMeme.count == 0 {
             
