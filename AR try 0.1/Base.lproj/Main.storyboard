@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -194,13 +194,58 @@
             </objects>
             <point key="canvasLocation" x="1318.840579710145" y="328.79464285714283"/>
         </scene>
+        <!--OnboardingScreen-->
+        <scene sceneID="mWx-qQ-Na8">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingScreen" id="MBb-U6-ubc" userLabel="OnboardingScreen" customClass="OnboardingScreenViewController" customModule="MemeGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zd5-10-Rg6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="infoPanel" translatesAutoresizingMaskIntoConstraints="NO" id="QBY-tx-4a8">
+                                <rect key="frame" x="49" y="183" width="317" height="531"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0i-IF-Bmf" userLabel="OKBoomerButton">
+                                <rect key="frame" x="128" y="536" width="159" height="72"/>
+                                <state key="normal" image="OKBoomerButton"/>
+                                <connections>
+                                    <action selector="continueToNext:" destination="MBb-U6-ubc" eventType="touchUpInside" id="ppZ-b0-THx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QBY-tx-4a8" firstAttribute="leading" secondItem="Zd5-10-Rg6" secondAttribute="leadingMargin" constant="29" id="2AL-J9-nIb"/>
+                            <constraint firstItem="Iav-6W-GaC" firstAttribute="bottom" secondItem="QBY-tx-4a8" secondAttribute="bottom" constant="148" id="Fiw-bM-20f"/>
+                            <constraint firstItem="p0i-IF-Bmf" firstAttribute="centerY" secondItem="QBY-tx-4a8" secondAttribute="centerY" constant="123.5" id="PrP-RQ-zoS"/>
+                            <constraint firstItem="p0i-IF-Bmf" firstAttribute="leading" secondItem="Iav-6W-GaC" secondAttribute="leading" constant="128" id="bw9-FY-o9Y"/>
+                            <constraint firstItem="QBY-tx-4a8" firstAttribute="top" secondItem="Iav-6W-GaC" secondAttribute="top" constant="139" id="coE-td-ZFg"/>
+                            <constraint firstItem="QBY-tx-4a8" firstAttribute="centerY" secondItem="Zd5-10-Rg6" secondAttribute="centerY" id="f0J-na-oA7"/>
+                            <constraint firstItem="QBY-tx-4a8" firstAttribute="trailing" secondItem="Zd5-10-Rg6" secondAttribute="trailingMargin" constant="-28" id="geV-JE-2A2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Iav-6W-GaC"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoPanelView" destination="QBY-tx-4a8" id="3Zv-Uh-usd"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="toMainSegue" id="D2S-Vw-iFq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L4y-Ua-E3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1436.2318840579712" y="352.90178571428572"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="OKBoomerButton" width="153" height="68"/>
         <image name="backbutton" width="584" height="272"/>
         <image name="complete frame" width="1004" height="1004"/>
+        <image name="infoPanel" width="414" height="896"/>
         <image name="librarybutton" width="1165" height="1166"/>
         <namedColor name="Main Colour">
             <color red="0.92941176470588238" green="0.69803921568627447" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="D2S-Vw-iFq"/>
+    </inferredMetricsTieBreakers>
 </document>
