@@ -5,22 +5,22 @@
   },
   "resources" : [
     {
-      "filename" : "Bottle.arobject"
+      "filename" : "0.arobject"
     },
     {
-      "filename" : "Box.arobject"
+      "filename" : "1.arobject"
     },
     {
-      "filename" : "Guitar.arobject"
+      "filename" : "2.arobject"
     },
     {
-      "filename" : "Tablet.arobject"
+      "filename" : "3.arobject"
     },
     {
-      "filename" : "Trash (3).arobject"
+      "filename" : "4.arobject"
     },
     {
-      "filename" : "Water.arobject"
+      "filename" : "5.arobject"
     }
   ]
 }
