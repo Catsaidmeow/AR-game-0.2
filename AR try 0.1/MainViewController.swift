@@ -32,9 +32,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         memeDatabase.loadFoundMemes()
         // Set the view's delegate
         sceneView.delegate = self
-        
-        tries.text = "\(memeDatabase.memeDict[1]!.found)"
-            
+                    
         // Show statistics such as fps and timing information, pointless now
         sceneView.showsStatistics = false
         

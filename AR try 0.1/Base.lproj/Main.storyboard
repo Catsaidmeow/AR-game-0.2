@@ -122,13 +122,6 @@
                                     <segue destination="PiK-wW-Jzz" kind="show" id="s3O-rp-7po"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6y-vZ-bGW">
-                                <rect key="frame" x="74" y="198" width="269" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="h9Q-pV-vSM" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="Mdc-hf-Rpr"/>
@@ -143,7 +136,6 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="sceneView" destination="EEB-ju-Xxc" id="cEc-XD-ylu"/>
-                        <outlet property="tries" destination="r6y-vZ-bGW" id="Xvc-or-Z7y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

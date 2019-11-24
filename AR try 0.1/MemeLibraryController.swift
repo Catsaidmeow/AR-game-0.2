@@ -56,6 +56,7 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
             cell.memeImageView.image = UIImage(named: "404NotFound.jpeg") /// put placeholder image
             
         } else { /// meme was found, don't show hint and show image
+            cell.memeFrame.image = UIImage(named: "collected.png")
             cell.memeImageView.image = UIImage(named: cell.memeAllocated!.imageName)
             cell.staticHintText.text = "" /// remove "Can't find it?" text
             cell.staticHintText.layer.zPosition = 39
