@@ -18,6 +18,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
 
     //decleration of stuff from storyboard
     @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var tries: UILabel!
     
     let configuration = ARWorldTrackingConfiguration()
     
@@ -29,10 +30,9 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         gestureRecognizer()
         
         memeDatabase.loadFoundMemes()
-
         // Set the view's delegate
         sceneView.delegate = self
-        
+                    
         // Show statistics such as fps and timing information, pointless now
         sceneView.showsStatistics = false
         
@@ -90,13 +90,12 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         if !memeDatabase.memeDict[memeIndex]!.found {
             memeDatabase.memeDict[memeIndex]!.found = true
             memeDatabase.storeFoundMeme()
-            print("Storing \(memeIndex)")
         }
         
         memeImage?.texture = SKTexture(imageNamed: memeDatabase.memeDict[memeIndex]!.imageName)
         
 //      create the 2d plane
-        let plane = SCNPlane(width: 0.3 * 2, height: 0.15 * 1)
+        let plane = SCNPlane(width: 0.4 , height: 0.4)
         plane.cornerRadius = plane.width / 8
         plane.firstMaterial?.diffuse.contents = spriteKitScene
         plane.firstMaterial?.isDoubleSided = true

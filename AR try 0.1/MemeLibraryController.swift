@@ -11,6 +11,7 @@ import Foundation
 
 class MemeLibraryController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource{
     
+    @IBOutlet weak var bordImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     var cellNumber : Int = 0
     
@@ -18,6 +19,7 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        
         setCells()
         
     }
@@ -43,16 +45,21 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
         cell.tag = cellNumber
         cell.memeAllocated = memeDatabase.memeDict[cellNumber]!
         cell.memeName.text = cell.memeAllocated!.name
+        cell.memeName.layer.zPosition = 20
         
         //        print(cell.tag)
         
+        
         if !cell.memeAllocated!.found { /// meme was not found yet, show greyed border and hint
             cell.memeHint.text = cell.memeAllocated!.hint /// add hint on how to find meme below "Can't find it?" text
+            cell.memeHint.layer.zPosition = 20
             cell.memeImageView.image = UIImage(named: "404NotFound.jpeg") /// put placeholder image
             
         } else { /// meme was found, don't show hint and show image
+            cell.memeFrame.image = UIImage(named: "collected.png")
             cell.memeImageView.image = UIImage(named: cell.memeAllocated!.imageName)
             cell.staticHintText.text = "" /// remove "Can't find it?" text
+            cell.staticHintText.layer.zPosition = 39
             
         }
         

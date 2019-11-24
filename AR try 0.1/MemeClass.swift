@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class MemesClass {
     
@@ -22,72 +23,48 @@ class MemesClass {
         4:
             Meme(imageName: "water", description: "Scissors vs. Water: also known as Cutting Water With Scissors, refers to an exploitable stock image of a stream of tap water being cut by a pair of scissors. In January 2019, the image was circulated as an object-labeling meme illustrating various futile actions.", name: "Every gamers' problem", hint: "Look for some water"),
         5:
-            Meme(imageName: "tablet", description: "Tech Support Gandalf is an advice animal character based on a behind-the-scene photograph of British actor Ian McKellen using a laptop computer while dressed in his Gandalf costume on the set of the 2012 epic fantasy film The Hobbit. The series portrays the actor as a tech-savvy wizard who offers troubleshooting tips and commentaries on social media phenomena. This meme became viral in 2014", name: "Gandalf ", hint: "Look for a tablet"),
-        6:
-            Meme (imageName: "cybertruck.jpeg", description: "Cybertruck is an electric truck vehicle manufactured by Elon Musk's automotive and energy company Tesla, Inc. After the truck was unveiled on November 21st 2019, memes about the vehicle's angular design widely circulated on Reddit and Twitter.", name: "Cybertruck", hint: "--"),
-        7:
-            Meme (imageName: "ok_boomer.jpeg", description: "OK Boomer is a dismissive retort often used to disregard or mock Baby Boomers and those who are perceived as old-fashioned and being out-of-touch.The exact origin of the phrase is currently unknown. On 4chan, the retort was first used by an anonymous /r9k/ user on September 3rd, 2015. On Reddit, the phrase was first used as a retort on October 26th, 2017. On Twitter, the phrase was first used on April 12th, 2018.", name: "Ok Boomer", hint: "--"),
-        8:
-            Meme (imageName: "jojo_reference.jpeg", description: "Is That a JoJo Reference? is a rhetorical question often used ironically by online commenters in response to pictures that include allusions to the manga and anime series JoJo's Bizarre Adventure. The jojo reference expression comes from a 4chan's /a/ thread on December 9th, 2009.", name: "Jojo Reference", hint: "--"),
-        9:
-            Meme (imageName: "cat.jpeg", description: "Woman Yelling at a Cat refers to a meme format featuring a screen cap of The Real Housewives of Beverly Hills cast members Taylor Armstrong and Kyle Richards followed by a picture of a confused-looking cat sitting behind a dinner plate. The format gained significant popularity across the web in mid-June 2019 and the cat was later identified as Smudge the Cat. This meme became viral in June 2019.", name: "Woman Yelling at a Cat", hint: "--"),
-        10:
-            Meme (imageName: "mini_keanu_reeves.jpeg", description: "Mini Keanu Reeves, also known as Midget Keanu Reeves and Short Keanu Reeves, refers to a still image of Keanu Reeves from the E3 2019 Cyberpunk 2077 presentation, edited to make the actor appear disproportionately short. Online, the image has been circulated as a blursed image and used as an exploitable. It became viral on June 9th 2019.", name: "Mini Keanu Reeves", hint: "--"),
-        11:
-            Meme (imageName: "area_51.jpeg", description: "Storm Area 51, also known as the Area 51 Raid and Alienstock, is a satirical Facebook event that calls for an assembly of a flash mob to infiltrate the top-secret American military airbase in Lincoln County, Nevada, scheduled to commence at 3:00 a.m. on September 20th, 2019. Since its launch in late June, the Facebook page went viral and millions of people have signed up to attend.", name: "Storm Area 51", hint: "--"),
-        12:
-            Meme (imageName: "naruto_run.jpeg", description: "Area 51 Naruto Run refers to the online nickname of Elia Elixir, an attendee of the Storm Area 51 event who photobombed a live newscast by performing Naruto Run as referenced in the original description for the event. The run, a parody of an action performed by the titular character from the anime Nartuto, features a person running with their arms stretched behind their back and their torso hinged at the waste. Video of the newscast went viral on various websites and inspired a series of image macro memes.", name: "Naruto run", hint: "--"),
-//        13:
-//            Meme (imageName: "", description: "", name: "", hint: ""),
-//        14:
-//            Meme (imageName: "", description: "", name: "", hint: ""),
-//        15:
-//            Meme (imageName: "", description: "", name: "", hint: ""),
-//        16:
-//            Meme (imageName: "", description: "", name: "", hint: ""),
-//        17:
-//        Meme (imageName: "", description: "", name: "", hint: ""),
-//        18:
-//        Meme (imageName: "", description: "", name: "", hint: ""),
-//        19:
-//        Meme (imageName: "", description: "", name: "", hint: ""),
-//        20:
-//        Meme (imageName: "", description: "", name: "", hint: ""),
-    
+            Meme(imageName: "tablet", description: "Tech Support Gandalf is an advice animal character based on a behind-the-scene photograph of British actor Ian McKellen using a laptop computer while dressed in his Gandalf costume on the set of the 2012 epic fantasy film The Hobbit. The series portrays the actor as a tech-savvy wizard who offers troubleshooting tips and commentaries on social media phenomena. This meme became viral in 2014", name: "Gandalf ", hint: "")
     ]
     
     // save the index for the found meme in plist
     func storeFoundMeme(){
         
-        let archiveURL = Bundle.main.url(forResource: "FoundMemes", withExtension: "plist")!
+        var foundList : [Bool] = []
         
-        // store the index of the memes found
-        var foundMemeNames: [Int] = []
-        for (key, meme) in memeDict {
-            if meme.found {
-                foundMemeNames.append(key)
-            }
+        let defaults = UserDefaults.standard
+        for index in 0...memeDatabase.memeDict.count - 1 {
+                
+                foundList.insert(memeDatabase.memeDict[index]!.found, at: index)
+            
         }
         
-        let encoded = try? PropertyListEncoder().encode(foundMemeNames)
-        try? encoded?.write(to: archiveURL, options: .noFileProtection)
+        defaults.set(foundList, forKey: "FoundMemes")
         
     }
     
     // load found memes from plist file and set found to true
-    func loadFoundMemes(){
+    func loadFoundMemes() {
         
-        if  let archiveURL = Bundle.main.url(forResource: "FoundMemes", withExtension: "plist"),
-            let retrivedNotesData = try? Data(contentsOf: archiveURL),
-            let foundIndecies = try? PropertyListDecoder().decode([Int].self, from: retrivedNotesData) {
+        let defaults = UserDefaults.standard
+        let seenMeme = defaults.array(forKey: "FoundMemes") as? [Bool] ?? []
+        
+        if seenMeme.count == 0 {
             
-            for index in foundIndecies {
-                memeDict[Int(index)]!.found = true
+            for index in 0...memeDatabase.memeDict.count - 1 {
+                
+                memeDatabase.memeDict[index]!.found = false
+                
             }
+        } else {
             
+            for index in 0...memeDatabase.memeDict.count - 1 {
+                
+                memeDatabase.memeDict[index]!.found = seenMeme[index]
+                
+            }
         }
     }
-    
 }
 
 let memeDatabase = MemesClass()
+//
