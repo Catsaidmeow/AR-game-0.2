@@ -4,6 +4,23 @@
     "author" : "xcode"
   },
   "resources" : [
-
+    {
+      "filename" : "Bottle.arobject"
+    },
+    {
+      "filename" : "Box.arobject"
+    },
+    {
+      "filename" : "Guitar.arobject"
+    },
+    {
+      "filename" : "Tablet.arobject"
+    },
+    {
+      "filename" : "Trash (3).arobject"
+    },
+    {
+      "filename" : "Water.arobject"
+    }
   ]
 }
