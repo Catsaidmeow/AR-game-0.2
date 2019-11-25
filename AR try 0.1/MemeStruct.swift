@@ -8,13 +8,12 @@
 
 import UIKit
 
-struct meme : Codable{
+struct Meme : Codable {
 
     var imageName : String /// name of the meme image
-    var textMeme : String /// description of meme
-    var memeName : String /// name of meme
-    var objectName : String /// identificable meme key
-    
+    var description : String /// description of meme
+    var name : String /// name of meme
+    var hint: String /// hint on where to find the meme
+    var found: Bool = false /// boolean weather it was found or not
 }
-
 

@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import AR_try_0_1
 
 class AR_try_0_1Tests: XCTestCase {
 
