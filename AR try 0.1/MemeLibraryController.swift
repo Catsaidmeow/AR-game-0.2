@@ -11,6 +11,7 @@ import Foundation
 
 class MemeLibraryController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource{
     
+    @IBOutlet weak var bordImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     var cellNumber : Int = 0
     
@@ -18,6 +19,7 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        
         setCells()
         
     }
@@ -32,7 +34,7 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return memeDatabase.memeArray.count /// return the amount of memes stored to set the amount of cells
+        return memeDatabase.memeDict.keys.count /// return the amount of memes stored to set the amount of cells
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -41,18 +43,23 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
         
         
         cell.tag = cellNumber
-        cell.memeAllocated = memeDatabase.memeArray[cellNumber]
+        cell.memeAllocated = memeDatabase.memeDict[cellNumber]!
         cell.memeName.text = cell.memeAllocated!.name
+        cell.memeName.layer.zPosition = 20
         
         //        print(cell.tag)
         
+        
         if !cell.memeAllocated!.found { /// meme was not found yet, show greyed border and hint
             cell.memeHint.text = cell.memeAllocated!.hint /// add hint on how to find meme below "Can't find it?" text
+            cell.memeHint.layer.zPosition = 20
             cell.memeImageView.image = UIImage(named: "404NotFound.jpeg") /// put placeholder image
             
         } else { /// meme was found, don't show hint and show image
+            cell.memeFrame.image = UIImage(named: "collected.png")
             cell.memeImageView.image = UIImage(named: cell.memeAllocated!.imageName)
             cell.staticHintText.text = "" /// remove "Can't find it?" text
+            cell.staticHintText.layer.zPosition = 39
             
         }
         
@@ -65,7 +72,7 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
     //    MARK: - Call the performSegue here
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)!
-        if memeDatabase.memeArray[cell.tag].found { /// only show popup if a found meme was clicked
+        if memeDatabase.memeDict[cell.tag]!.found { /// only show popup if a found meme was clicked
             performSegue(withIdentifier: "toInformation", sender: cell)
         }
     }
@@ -75,7 +82,7 @@ class MemeLibraryController: UIViewController , UICollectionViewDelegate, UIColl
         if segue.identifier == "toInformation"{
             
             let nextScreen = segue.destination as! MemeInformationPopupController
-            nextScreen.popUpMeme = memeDatabase.memeArray[(sender as AnyObject).tag as Int]
+            nextScreen.popUpMeme = memeDatabase.memeDict[(sender as AnyObject).tag as Int]!
         }
     }
 }
